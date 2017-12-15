@@ -7,7 +7,7 @@ package (RHEL/CentOS/Fedora, SLES/OpenSUSE).
 
 * EPEL/OBS Repository for Zend Framework
 * Apache 2.2+
-* PHP 5.3+, Zend Framework, PHP PDO MySQL/PostgreSQL, PHP LDAP (optional)
+* PHP 5.4+, Zend Framework, PHP PDO MySQL/PostgreSQL, PHP LDAP (optional)
 * MySQL or PostgreSQL for internal DB
 * Icinga 1.x or 2.x providing an IDO database (default: `icinga`)
 * Icinga 1.x or 2.x providing an external command pipe (default: `icinga2.cmd`)
