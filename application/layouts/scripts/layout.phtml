@@ -44,6 +44,15 @@ $innerLayoutScript = $this->layout()->innerLayout . '.phtml';
   </script>
 <?php endif ?>
   <link rel="stylesheet" href="<?= $this->href($cssfile) ?>" media="all" type="text/css" />
+
+  <noscript>
+    <style>
+      .no-noscript {
+        display: none;
+      }
+    </style>
+  </noscript>
+
   <!-- Respond.js IE8 support of media queries -->
   <!--[if lt IE 9]>
   <script src="<?= $this->baseUrl('js/vendor/respond.min.js');?>"></script>
