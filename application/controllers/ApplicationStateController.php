@@ -14,8 +14,14 @@ use Icinga\Web\Session;
  */
 class ApplicationStateController extends Controller
 {
+    protected $requiresAuthentication = false;
+
     public function indexAction()
     {
+        if (! $this->Auth()->isAuthenticated()) {
+            return;
+        }
+
         $this->_helper->layout()->disableLayout();
         if (isset($_COOKIE['icingaweb2-session'])) {
             $last = (int) $_COOKIE['icingaweb2-session'];
