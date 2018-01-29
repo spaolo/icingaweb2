@@ -298,6 +298,11 @@ class User
      */
     public function setUsername($name)
     {
+        //do not search domain in login
+        if (Config::app()->get('authentication', 'disable_domain')){
+            $this->localUsername = $name;
+            $this->domain = null;
+        } else {
         $parts = explode('\\', $name, 2);
         if (count($parts) === 2) {
             list($this->domain, $this->localUsername) = $parts;
@@ -309,6 +314,7 @@ class User
                 $this->localUsername = $name;
                 $this->domain = null;
             }
+        }
         }
 
         return $this;
